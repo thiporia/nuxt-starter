@@ -5,6 +5,10 @@ module.exports = {
     project: './tsconfig.json',
     extraFileExtensions: ['.vue'],
   },
+  ignorePatterns: ['**/tailwind.config.js'],
+  rules: {
+    //...
+  },
   env: {
     browser: true,
     jest: true,

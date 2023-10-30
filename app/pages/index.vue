@@ -55,6 +55,16 @@ import settings from '@/content/settings/general.json';
   },
 })
 export default class Home extends Vue {
+  mounted() {
+    console.log('onload', document.documentElement.scrollHeight);
+    window.parent.postMessage(
+      {
+        height: document.documentElement.scrollHeight,
+      },
+      '*'
+    );
+  }
+
   welcomeText = settings.welcomeText;
 
   get posts(): Post[] {
